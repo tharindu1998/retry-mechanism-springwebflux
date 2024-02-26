@@ -3,6 +3,15 @@ package com.example.retrymechanism.dto;
 public class Item {
     private String itemId;
     private String itemName;
+    private String stockNumber;
+
+    public String getStockNumber() {
+        return stockNumber;
+    }
+
+    public void setStockNumber(String stockNumber) {
+        this.stockNumber = stockNumber;
+    }
 
     public String getItemId() {
         return itemId;
@@ -25,6 +34,7 @@ public class Item {
         return "Item{" +
                 "itemId='" + itemId + '\'' +
                 ", itemName='" + itemName + '\'' +
+                ", stockNumber='" + stockNumber + '\'' +
                 '}';
     }
 }
