@@ -41,7 +41,7 @@ public class ItemClientImpl implements ItemClient {
                         && ((WebClientResponseException) throwable).getStatusCode().is5xxServerError()
                         || throwable.getCause() instanceof TimeoutException)
                 .onRetryExhaustedThrow((retryBackoffSpec, retrySignal) -> {
-                    log.info("SERVICE_UNAVAILABLE | External Service failed to process after max retries");
+                    log.info("SERVICE_UNAVAILABLE | External Service failed to process after max retries ");
                     try {
                         throw new GeneralStatusCodeException(ApiError.SERVICE_UNAVAILABLE);
                     } catch (GeneralStatusCodeException e) {
